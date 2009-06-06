@@ -1,0 +1,9 @@
+John David Eriksen
+http://www.jkndrkn.com
+john.eriksen@yahoo.com
+
+This repository houses three small Max applications created as solutions to problems assigned in an electroacoustic music composition course taught at the Florida Electroacoustic Music Studio.
+
+These projects are intended to demonstrate my particular approach to solving the assigned problems and do not represent solutions that have been particularly ardously tested.
+
+Most of these projects are fairly small and simple. Do note, however, that application 3 is an implementation of John Conway's Game of Life written using a Matrix object and JavaScript ;]
