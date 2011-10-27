@@ -26,7 +26,7 @@ function table_data() {
 	if (arguments.length == octave) {
 		activeNotes = arguments;
 	}
-	
+
 	//printArray(activeNotes, "table data");
 }
 
@@ -40,7 +40,7 @@ function matrix_column() {
 	currentColumn = arguments[0];
 	//post("read_data: " + currentColumn);
 	//post();
-	
+
 	read_table();
 	playFlag = true;
 }
@@ -78,7 +78,7 @@ function emitPitches(column) {
 			mappedPitchVelocity = mapBaseNoteToTable(baseNote, activeNotes);
 			baseNote = mappedPitchVelocity[0];
 			velocity = mappedPitchVelocity[1];
-			
+
 			pitch = basePitch + baseNote + (octaveOffset * octave);
 
 	              //post("oct: " + octaveOffset + " baseNote: " + baseNote + " pitch: " + pitch); post();
@@ -104,7 +104,7 @@ function mapBaseNoteToTable(baseNote, pitchTable) {
 		if (velocity > 0) {
 			if (baseNote <= i) {
 				//post("velocity: " + velocity + " baseNote: " + baseNote + " i: " + i); post();
-				
+
 				mappedNote = i;
 				mappedVelocity = velocity;
 				noteFound = true;
@@ -133,7 +133,7 @@ function scheduleNote(pitch, velocity) {
 	var initialDelayScaler = 40;
 	var noteDurationScaler = 10;
 	var noteDurationBase = 200;
-	
+
 	if ((velocity >= 0) && (velocity <= 127)) {
 		var repetitions = Math.ceil(velocity / repetitionScaler);
 		var initialdelay = 0;
@@ -148,7 +148,7 @@ function scheduleNote(pitch, velocity) {
 			noteTask.repeat(0, initialdelay);
 		}
 	}
-}  
+}
 
 function emitNote() {
 	pitch = arguments.callee.task.pitch;

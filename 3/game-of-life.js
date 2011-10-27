@@ -32,7 +32,7 @@ function initBoards() {
 
 function initNeighborsData() {
 	neighborsCoords = [
-		[0, 0], [0, 0], [0, 0], [0, 0], 
+		[0, 0], [0, 0], [0, 0], [0, 0],
 		[0, 0], [0, 0], [0, 0], [0, 0]
 	];
 
@@ -53,7 +53,7 @@ function neighborsGetCoords(i, j) {
 				neighborsCoords[neighborIndex][1] = j + m;
 				neighborIndex++;
 			}
-		}		
+		}
 	}
 
 	//printNeighborsCoords();
@@ -139,4 +139,4 @@ function updateBoard() {
 			outlet(1, i, j, boardUpdated[i][j]);
 		}
 	}
-}	
+}
